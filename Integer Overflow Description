@@ -1,0 +1,9 @@
+
+
+Cause:-
+Vulnerable function is "process_k5beta7_princ" in the Kerberos database dump file, 
+there is an unsigned 32-bit integer variable and it is read from the file(Trusted Data), 
+it is assigned to a 16-bit integer variable.
+
+To trigger the Integer Overflow vulnerability we can see there is only one function "process_tagged" 
+which takes vulnerable function name "proces_k5beta7_princ" as an argument and call it using a function pointer.
